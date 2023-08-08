@@ -1,4 +1,4 @@
-![banner image](./public/banner.png)
+![banner image](./public/banner_readme.png)
 
 # Personal blog
 Welcome to the GitHub repository of my personal blog! Join me as we dive deep into the captivating realms of mathematics, machine learning, calculus, and programming!
