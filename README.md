@@ -7,6 +7,19 @@ Crafted with passion, this blog serves as a platform to share my enthusiasm for 
 
 ## Tech Stack
 
-This blog is powered by AstroJS, TypeScript, and Sass, this space invites you to a journey of discovery and growth. Let's explore the harmonious blend of these topics and unlock new horizons together!"
+This blog is powered by AstroJS, TypeScript, and Sass, this space invites you to a journey of discovery and growth. Let's explore the harmonious blend of these topics and unlock new horizons together!
 
 ![tech stack](./public/tech_stack.png)
+
+## How to get this project
+You can copy this project with the follwing commands:
+
+```
+git clone https://github.com/Hctor11/personal-blog.git
+```
+
+and then install the dependencies:
+
+```
+npm i
+```
