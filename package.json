@@ -13,5 +13,8 @@
     "astro": "^2.10.3",
     "rehype-katex": "^6.0.3",
     "remark-math": "^5.1.1"
+  },
+  "devDependencies": {
+    "sass": "^1.64.2"
   }
 }
