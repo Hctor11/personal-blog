@@ -1,5 +1,9 @@
 ---
 import '../styles/styles.sass'
+import { ENTRIES } from '../util/entries';
+
+const setStyle = (img) => `background-image: url(${img})`
+
 ---
 
 <html lang="en">
@@ -11,6 +15,21 @@ import '../styles/styles.sass'
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<header>
+			<h1>Héctor Rivera personal blog</h1>
+			<p>Blog to talk about the things that I like.</p>
+
+			<div class="recent-entries-container">
+				{ENTRIES.map(({title, description, url,img}) => (
+					<div class="recent-entry" styles={setStyle(img)}>
+						<a href={url} >
+							<h3>{title}</h3>
+							<p>{description}</p>
+						</a>
+					</div>
+				))}				
+			</div>
+		</header>
+
 	</body>
 </html>

@@ -19,7 +19,6 @@ const { frontmatter } = Astro.props;
     <title>{frontmatter.title}</title>
 </head>
 <body>
-    <img src={frontmatter.url} alt="image">
     <slot/>
 </body>
 </html>
