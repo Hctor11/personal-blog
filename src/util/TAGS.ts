@@ -1,0 +1,1 @@
+export const tags:string[] = ["Calculus", "Machine Learning", "Programming","Linear Algebra","UIUX"]
