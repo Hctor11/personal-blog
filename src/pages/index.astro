@@ -3,7 +3,7 @@ import '../styles/styles.sass'
 import { ENTRIES } from '../util/entries';
 import Component from "../components/Component";
 
-const RECENT_ENTRIES = ENTRIES.slice(0,6)
+const RECENT_ENTRIES = ENTRIES.slice(ENTRIES.length - 6,ENTRIES.length).reverse()
 
 const setStyle = (img) => `background-image: url(${img});`
 
@@ -26,8 +26,8 @@ const setStyle = (img) => `background-image: url(${img});`
 
 			<h3 style="font-weight: 400; margin-bottom: 5px">//Recent entries<h3>
 			<div class="recent-entries-container">
-				{RECENT_ENTRIES.map(({title, description, url,img}) => (
-					<div class="recent-entry">
+				{RECENT_ENTRIES.map(({title, description, url,img},id) => (
+					<div class=`recent-entry-${id} recent-entry`>
 						<a href={url} styles={setStyle(img)}>
 							<h3>{title}</h3>
 							<p>{description}</p>
