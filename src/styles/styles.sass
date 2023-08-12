@@ -9,9 +9,38 @@ body
     font-family: 'Roboto Mono', monospaceO
     background-color: #1e1e1e
     color: white
-    margin: 100px
-    max-width: 600px
+    margin: 100px 175px
+    max-width: 700px
+
+.main-title
+    margin-bottom: 50px
+
+.recent-entries-container
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 10px
 
 .recent-entry
-    width: 300px
-    height: 600px
+    font-size: 14px
+    border: 2px solid white
+    font-weight: 300
+    padding: 10px
+    transition: .3s ease-in-out
+
+    h3
+        font-size: 16px
+        font-weight: 400
+        margin-bottom: 12px
+
+    a
+        display: inline-block
+        width: fit-content
+        height: 150px
+        text-decoration: none
+        color: white
+
+.recent-entry:hover
+    border-radius: 10px
+    background-color: white
+    a
+        color: #1e1e1e

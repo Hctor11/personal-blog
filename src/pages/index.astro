@@ -1,8 +1,9 @@
 ---
 import '../styles/styles.sass'
 import { ENTRIES } from '../util/entries';
+import Component from "../components/Component";
 
-const setStyle = (img) => `background-image: url(${img})`
+const setStyle = (img) => `background-image: url(${img});`
 
 ---
 
@@ -16,13 +17,16 @@ const setStyle = (img) => `background-image: url(${img})`
 	</head>
 	<body>
 		<header>
-			<h1>Héctor Rivera personal blog</h1>
-			<p>Blog to talk about the things that I like.</p>
+			<div class="main-title">
+				<h1>Héctor Rivera personal blog</h1>
+				<p>Blog to talk about the things that I like.</p>
+			</div>
 
+			<h3 style="font-weight: 400; margin-bottom: 5px">//Recent entries<h3>
 			<div class="recent-entries-container">
 				{ENTRIES.map(({title, description, url,img}) => (
-					<div class="recent-entry" styles={setStyle(img)}>
-						<a href={url} >
+					<div class="recent-entry">
+						<a href={url} styles={setStyle(img)}>
 							<h3>{title}</h3>
 							<p>{description}</p>
 						</a>
@@ -30,6 +34,6 @@ const setStyle = (img) => `background-image: url(${img})`
 				))}				
 			</div>
 		</header>
-
+		<Component></Component>
 	</body>
 </html>
