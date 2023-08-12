@@ -1,7 +1,9 @@
 const Component = () => {
   return (
     <div>
-        this is a React component
+        <h3 style={{fontWeight: '400', marginBottom: '5px'}}>
+          // Search by Tag
+        </h3>
     </div>
   )
 }

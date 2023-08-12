@@ -1,4 +1,4 @@
-import { tags } from './TAGS';
+import { TAGS } from './TAGS';
 
 // ["Calculus", "Machine Learning", "Programming","Linear Algebra","UIUX"]
 
@@ -10,7 +10,8 @@ export const ENTRIES = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.",
     url: '/programming/init',
     img: '/banner_readme.png',
-    tags: [tags[0], tags[1], tags[2]]
+    date: '22/22/2222',
+    tag: TAGS[0]
   },
   {
     id: 2,
@@ -19,7 +20,8 @@ export const ENTRIES = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     url: '/programming/init',
     img: '/banner_readme.png',
-    tags: [tags[0]]
+    date: '22/22/2222',
+    tag: TAGS[0]
   },
   {
     id: 3,
@@ -28,7 +30,8 @@ export const ENTRIES = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.",
     url: '/programming/init',
     img: '/banner_readme.png',
-    tags: [tags[0]]
+    date: '22/22/2222',
+    tag: TAGS[2]
   },
   {
     id: 4,
@@ -37,7 +40,8 @@ export const ENTRIES = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy",
     url: '/programming/init',
     img: '/banner_readme.png',
-    tags: [tags[1]]
+    date: '22/22/2222',
+    tag: TAGS[1] 
   },
   {
     id: 5,
@@ -45,7 +49,9 @@ export const ENTRIES = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     url: '/programming/init',
-    img: '/banner_readme.png'
+    img: '/banner_readme.png',
+    date: '22/22/2222',
+    tag: TAGS[2]
   },
   {
     id: 6,
@@ -53,7 +59,9 @@ export const ENTRIES = [
     description:
       "What is machine learning??? this is a nice question to ask and its answer is made up of",
     url: '/programming/init',
-    img: '/banner_readme.png'
+    img: '/banner_readme.png',
+    date: '22/22/2222',
+    tag: TAGS[4]
   },
   {
     id: 7,
@@ -61,7 +69,9 @@ export const ENTRIES = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.",
     url: '/programming/init',
-    img: '/banner_readme.png'
+    img: '/banner_readme.png',
+    date: '22/22/2222',
+    tag: TAGS[2]
   },
   {
     id: 8,
@@ -69,7 +79,9 @@ export const ENTRIES = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     url: '/programming/init',
-    img: '/banner_readme.png'
+    img: '/banner_readme.png',
+    date: '22/22/2222',
+    tag: TAGS[1]
   },
   {
     id: 9,
@@ -77,7 +89,9 @@ export const ENTRIES = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.",
     url: '/programming/init',
-    img: '/banner_readme.png'
+    img: '/banner_readme.png',
+    date: '22/22/2222',
+    tag: TAGS[4]
   },
   {
     id: 10,
@@ -85,7 +99,9 @@ export const ENTRIES = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy",
     url: '/programming/init',
-    img: '/banner_readme.png'
+    img: '/banner_readme.png',
+    date: '22/22/2222',
+    tag: TAGS[3]
   },
   {
     id: 11,
@@ -93,7 +109,9 @@ export const ENTRIES = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     url: '/programming/init',
-    img: '/banner_readme.png'
+    img: '/banner_readme.png',
+    date: '22/22/2222',
+    tag: TAGS[1]  
   },
   {
     id: 12,
@@ -101,7 +119,9 @@ export const ENTRIES = [
     description:
       "What is machine learning??? this is a nice question to ask and its answer is made up of",
     url: '/programming/init',
-    img: '/banner_readme.png'
+    img: '/bgtest.png',
+    date: '22/22/2222',
+    tag: TAGS[2]
   }
   ,
   {
@@ -110,6 +130,8 @@ export const ENTRIES = [
     description:
       "What is machine learning??? this is a nice question to ask and its answer is made up of",
     url: '/programming/init',
-    img: '/banner_readme.png'
+    img: '/bgtest.png',
+    date: '22/22/2222',
+    tag: TAGS[4]
   }
 ];

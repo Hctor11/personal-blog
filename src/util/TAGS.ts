@@ -1,1 +1,1 @@
-export const tags:string[] = ["Calculus", "Machine Learning", "Programming","Linear Algebra","UIUX"]
+export const TAGS:string[] = ["Calculus", "Machine Learning", "Programming","Linear Algebra","UIUX"]

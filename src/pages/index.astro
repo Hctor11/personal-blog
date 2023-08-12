@@ -1,21 +1,23 @@
 ---
 import '../styles/styles.sass'
-import { ENTRIES } from '../util/entries';
+import { ENTRIES } from '../util/ENTRIES';
+import { TAGS } from '../util/TAGS';
 import Component from "../components/Component";
+import TagsSearch from "../components/TagsSearch";
 
-const RECENT_ENTRIES = ENTRIES.slice(ENTRIES.length - 6,ENTRIES.length).reverse()
+
+const RECENT_ENTRIES = ENTRIES.slice(ENTRIES.length - 4,ENTRIES.length).reverse()
 
 const setStyle = (img) => `background-image: url(${img});`
 
 ---
-
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/iso.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Blog</title>
 	</head>
 	<body>
 		<header>
@@ -26,16 +28,32 @@ const setStyle = (img) => `background-image: url(${img});`
 
 			<h3 style="font-weight: 400; margin-bottom: 5px">//Recent entries<h3>
 			<div class="recent-entries-container">
-				{RECENT_ENTRIES.map(({title, description, url,img},id) => (
-					<div class=`recent-entry-${id} recent-entry`>
-						<a href={url} styles={setStyle(img)}>
+				{RECENT_ENTRIES.map(({title, description, url,img,date,tag},id) => (
+					<div class=`recent-entry-${id} recent-entry` 
+						style=`
+							background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.6) , rgba(0, 0, 0, 1)), url(${img}); 
+							background-size: cover;`
+					>
+						<a href={url}>
 							<h3>{title}</h3>
 							<p>{description}</p>
+							<span class='date-entry'>{date}</span>
+							<span 
+								class='tag-entry' 
+								style=`
+									background-color: 
+										${tag == TAGS[0] ? '#347aeb' : 
+											tag == TAGS[1] ? '#eb34e5' : 
+												tag == TAGS[2] ? '#009930' : 
+													tag == TAGS[3] ? '#eb5f34' : '#6234eb'}`>
+								{tag}
+							</span>
 						</a>
 					</div>
 				))}				
 			</div>
 		</header>
 		<Component></Component>
+		<TagsSearch/>
 	</body>
 </html>
