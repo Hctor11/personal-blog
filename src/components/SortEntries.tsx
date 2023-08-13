@@ -1,6 +1,6 @@
 import { ENTRIES } from "../util/ENTRIES";
 import { TAGS } from "../util/TAGS";
-import "../styles/styles.css";
+import "../styles/styles.sass";
 
 interface Props {
   toSort: string;
@@ -24,7 +24,7 @@ const SortEntries = (props: Props) => {
             >
               <h3>{title}</h3>
               <p>{description}</p>
-              <span>{date}</span>
+              <span className="date-entry">{date}</span>
               <span
                 className="all-tag-entry"
                 style={{
@@ -46,7 +46,7 @@ const SortEntries = (props: Props) => {
                 {tag}
               </span>
             </a>
-          ))
+          )).reverse()
         : SORTED_ENTRIES.map(
             ({ title, description, url, img, date, tag }, id) => (
               <a
@@ -59,7 +59,7 @@ const SortEntries = (props: Props) => {
               >
                 <h3>{title}</h3>
                 <p>{description}</p>
-                <span>{date}</span>
+                <span className="date-entry">{date}</span>
                 <span
                   className="all-tag-entry"
                   style={{
@@ -82,7 +82,7 @@ const SortEntries = (props: Props) => {
                 </span>
               </a>
             )
-          )}
+          ).reverse()}
     </div>
   );
 };

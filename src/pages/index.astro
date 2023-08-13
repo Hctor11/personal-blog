@@ -4,7 +4,7 @@ import { ENTRIES } from '../util/ENTRIES';
 import { TAGS } from '../util/TAGS';
 import Component from "../components/Component";
 import TagsSearch from "../components/TagsSearch";
-
+import FooterRes from '../components/Footer';
 
 const RECENT_ENTRIES = ENTRIES.slice(ENTRIES.length - 4,ENTRIES.length).reverse()
 ---
@@ -18,7 +18,7 @@ const RECENT_ENTRIES = ENTRIES.slice(ENTRIES.length - 4,ENTRIES.length).reverse(
 	</head>
 	<body>
 		<header>
-			<div class="main-title">
+			<div class="main-title" id="main-title">
 				<h1>Héctor Rivera personal blog</h1>
 				<p>Blog to talk about the things that I like.</p>
 			</div>
@@ -53,5 +53,6 @@ const RECENT_ENTRIES = ENTRIES.slice(ENTRIES.length - 4,ENTRIES.length).reverse(
 		</header>
 		<Component></Component>
 		<TagsSearch client:load/>
+		<FooterRes/>
 	</body>
 </html>

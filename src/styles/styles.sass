@@ -4,12 +4,13 @@
     margin: 0
     padding: 0
     box-sizing: border-box
+    scroll-behavior: smooth
 
 body
     font-family: 'Roboto Mono', monospaceO
     background-color: #0E0E0E
     color: white
-    margin: 100px auto
+    margin: 100px auto 50px auto
     max-width: 700px
 
 .main-title
@@ -42,11 +43,6 @@ body
         color: white
         border: 2px solid white
 
-    .date-entry
-        position: absolute
-        bottom: 10px
-        filter: opacity(0.5)
-
     .tag-entry
         padding: 3px
         position: absolute
@@ -54,23 +50,32 @@ body
         bottom: 10px
         border: 1px solid white
 
+.date-entry
+    position: absolute
+    bottom: 10px
+    filter: opacity(0.5)
 
 .entries-container
     display: grid
     grid-template-columns: repeat(2,1fr)
     gap: 20px
 
-.all-tag-entry
-    padding: 2px
-    border: 1px solid white
-
 .all-entry
+    position: relative
     border: 1px solid white
     padding: 16px
     width: 100%
     height: 200px
     text-decoration: none
     color: #fff
+    transition: .3s ease-in-out   
+
+    .all-tag-entry
+        padding: 2px
+        border: 1px solid white
+        position: absolute
+        right: 10px
+        bottom: 10px
 
     h3
         font-weight: 400
@@ -83,8 +88,18 @@ body
 .recent-entry-1
     grid-row: 2 / 4
 
-.recent-entry:hover
+.recent-entry:hover, .all-entry:hover
     filter: invert(0.2)
+
+.footer
+    display: flex
+    justify-content: center
+    margin-top:50px 
+
+.footer-img
+    display: inline-block
+    height: 100px
+    width: 150px
 
 .tag-search-button
     padding: 5px
