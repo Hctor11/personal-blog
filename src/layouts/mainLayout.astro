@@ -1,6 +1,6 @@
 ---
 import '../styles/styles.sass'
-
+import Nav from '../components/Nav';
 const { frontmatter } = Astro.props;
 ---
 
@@ -20,6 +20,7 @@ const { frontmatter } = Astro.props;
     <title>{frontmatter.title}</title>
 </head>
 <body>
+    <Nav/>
     <slot/>
 </body>
 </html>
