@@ -5,6 +5,7 @@ import { TAGS } from '../util/TAGS';
 import Component from "../components/Component";
 import TagsSearch from "../components/TagsSearch";
 import FooterRes from '../components/Footer';
+import Nav from '../components/Nav';
 
 const RECENT_ENTRIES = ENTRIES.slice(ENTRIES.length - 4,ENTRIES.length).reverse()
 ---
@@ -17,6 +18,7 @@ const RECENT_ENTRIES = ENTRIES.slice(ENTRIES.length - 4,ENTRIES.length).reverse(
 		<title>Blog</title>
 	</head>
 	<body>
+		<Nav/>
 		<header>
 			<div class="main-title" id="main-title">
 				<h1>Héctor Rivera personal blog</h1>
