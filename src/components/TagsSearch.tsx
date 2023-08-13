@@ -35,7 +35,10 @@ const TagsSearch = () => {
           {tag}
         </button>
       ))}
-      <p style={{color: '#fff'}}>{selectedTag}</p>
+      <p style={{
+        color: '#fff', 
+        marginTop: '12px',
+        filter: 'opacity(0.4)'}}>{selectedTag}</p>
       <SortEntries toSort={selectedTag}/>
     </div>
   );
