@@ -7,9 +7,6 @@ import TagsSearch from "../components/TagsSearch";
 
 
 const RECENT_ENTRIES = ENTRIES.slice(ENTRIES.length - 4,ENTRIES.length).reverse()
-
-const setStyle = (img) => `background-image: url(${img});`
-
 ---
 <html lang="en">
 	<head>
@@ -45,7 +42,8 @@ const setStyle = (img) => `background-image: url(${img});`
 										${tag == TAGS[0] ? '#347aeb' : 
 											tag == TAGS[1] ? '#eb34e5' : 
 												tag == TAGS[2] ? '#009930' : 
-													tag == TAGS[3] ? '#eb5f34' : '#6234eb'}`>
+													tag == TAGS[3] ? '#eb5f34' : 
+														tag == TAGS[4] ? '#6234eb' : '#383838'}`>
 								{tag}
 							</span>
 						</a>
@@ -54,6 +52,6 @@ const setStyle = (img) => `background-image: url(${img});`
 			</div>
 		</header>
 		<Component></Component>
-		<TagsSearch/>
+		<TagsSearch client:load/>
 	</body>
 </html>

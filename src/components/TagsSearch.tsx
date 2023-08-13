@@ -1,12 +1,21 @@
-import React from "react";
+import { useState } from "react";
 import { TAGS } from "./../util/TAGS";
+import { ENTRIES } from "../util/ENTRIES";
+import SortEntries from "./SortEntries";
 
 const TagsSearch = () => {
+
+  const [selectedTag, setSelectedTag] = useState("ALL");
+
+  const handleTagClick = (tag:string) => {
+    return setSelectedTag(tag)
+  }
+
   return (
     <div className = 'tag-search'>
       {TAGS.map((tag, id) => (
-        <button
-          className="tag-search-button"
+          <button
+          className={`tag-search-button ${tag}`}
           key={id}
           style={{
             backgroundColor: `${
@@ -18,15 +27,18 @@ const TagsSearch = () => {
                 ? "#009930"
                 : tag == TAGS[3]
                 ? "#eb5f34"
-                : "#6234eb"
+                : tag == TAGS[4] ? '#6234eb' : '#383838'
             }`,
           }}
+          onClick={() => handleTagClick(tag)}
         >
           {tag}
         </button>
       ))}
+      <p style={{color: '#fff'}}>{selectedTag}</p>
+      <SortEntries toSort={selectedTag}/>
     </div>
   );
-};
+}
 
 export default TagsSearch;
