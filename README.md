@@ -14,13 +14,13 @@ This blog is powered by AstroJS, TypeScript, and Sass, this space invites you to
 ## How to get this project
 You can copy this project with the follwing commands:
 
-```git
+```{git}
 git clone https://github.com/Hctor11/personal-blog.git
 ```
 
 and then install the dependencies and run the code:
 
-```git
+```{git}
 npm i
 npm run dev
 ```
