@@ -1,5 +1,5 @@
-import { ENTRIES } from "../util/ENTRIES";
-import { TAGS } from "../util/TAGS";
+import ENTRIES from "../util/entries";
+import TAGS from "../util/TAGS";
 import "../styles/styles.sass";
 
 interface Props {
