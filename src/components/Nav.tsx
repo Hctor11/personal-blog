@@ -2,10 +2,10 @@
 const Nav = () => {
   return (
     <div className="navigation">
-        <a href="/">
+        <a href="/personal-blog">
             home
         </a>
-        <a href="/about">
+        <a href="/personal-blog/about">
             about me
         </a>
     </div>
