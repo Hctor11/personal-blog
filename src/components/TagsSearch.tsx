@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { TAGS } from "./../util/TAGS";
-import { ENTRIES } from "../util/ENTRIES";
+import TAGS from "./../util/TAGS";
+import ENTRIES from "../util/ENTRIES";
 import SortEntries from "./SortEntries";
 
 const TagsSearch = () => {

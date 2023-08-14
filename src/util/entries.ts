@@ -1,8 +1,8 @@
-import { TAGS } from './TAGS';
+import TAGS from './TAGS';
 
 // ["Calculus", "Machine Learning", "Programming","Linear Algebra","UIUX"]
 
-export const ENTRIES = [
+const ENTRIES = [
   {
     id: 1,
     title: "#this is a title test ALL",
@@ -135,3 +135,5 @@ export const ENTRIES = [
     tag: TAGS[4]
   }
 ];
+
+export default ENTRIES
