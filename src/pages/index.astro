@@ -30,10 +30,10 @@ const RECENT_ENTRIES = ENTRIES.slice(ENTRIES.length - 4,ENTRIES.length).reverse(
 				{RECENT_ENTRIES.map(({title, description, url,img,date,tag},id) => (
 					<div class=`recent-entry-${id} recent-entry` 
 						style=`
-							background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.6) , rgba(0, 0, 0, 1)), url(${img}); 
+							background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.6) , rgba(0, 0, 0, 1)), url('/personal-blog${img}'); 
 							background-size: cover;`
 					>
-						<a href={url}>
+						<a href={`/personal-blog${url}`}>
 							<h3>{title}</h3>
 							<p>{description}</p>
 							<span class='date-entry'>{date}</span>

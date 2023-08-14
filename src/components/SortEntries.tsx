@@ -15,7 +15,7 @@ const SortEntries = (props: Props) => {
         ? ENTRIES.map(({ title, description, url, img, date, tag }, id) => (
             <a
               key={id}
-              href={`/personal-blog/${url}`}
+              href={`/personal-blog${url}`}
               className="all-entry"
               style={{
                 backgroundImage: `linear-gradient(270deg, rgba(0, 0, 0, 0.7) , rgba(0, 0, 0, 1)), url(${img})`,
@@ -51,7 +51,7 @@ const SortEntries = (props: Props) => {
             ({ title, description, url, img, date, tag }, id) => (
               <a
                 key={id}
-                href={`/personal-blog/${url}`}
+                href={`/personal-blog${url}`}
                 className="all-entry"
                 style={{
                   backgroundImage: `${img}`
