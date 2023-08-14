@@ -1,4 +1,4 @@
-import TAGS from './TAGS.ts';
+import TAGS from './TAGS';
 
 // ["Calculus", "Machine Learning", "Programming","Linear Algebra","UIUX"]
 
