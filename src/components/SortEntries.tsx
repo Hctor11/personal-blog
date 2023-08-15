@@ -18,7 +18,7 @@ const SortEntries = (props: Props) => {
               href={`/personal-blog${url}`}
               className="all-entry"
               style={{
-                backgroundImage: `linear-gradient(270deg, rgba(0, 0, 0, 0.7) , rgba(0, 0, 0, 1)), url(${img})`,
+                backgroundImage: `linear-gradient(270deg, rgba(0, 0, 0, 0.7) , rgba(0, 0, 0, 1)), url(/personal-blog${img})`,
                 backgroundSize: 'cover'
               }}
             >
@@ -54,7 +54,7 @@ const SortEntries = (props: Props) => {
                 href={`/personal-blog${url}`}
                 className="all-entry"
                 style={{
-                  backgroundImage: `linear-gradient(270deg, rgba(0, 0, 0, 0.7) , rgba(0, 0, 0, 1)), url(${img})`,
+                  backgroundImage: `linear-gradient(270deg, rgba(0, 0, 0, 0.7) , rgba(0, 0, 0, 1)), url(/personal-blog${img})`,
                   backgroundSize: 'cover'
                 }}
               >

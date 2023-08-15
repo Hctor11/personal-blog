@@ -3,7 +3,7 @@ layout: ../../layouts/mainLayout.astro
 title: "Psychology in UIUX"
 image: "/entry1.png"
 date: "08/15/2023"
-next: ''
+next: '/personal-blog/programming/init'
 previous: ''
 ---
 <style>
