@@ -21,6 +21,7 @@ const { frontmatter } = Astro.props;
 </head>
 <body>
     <Nav/>
-    <slot/>
+    <img class="entry-image-md" src={frontmatter.image} alt="image">
+    <slot class="inner-content-md"/>
 </body>
 </html>

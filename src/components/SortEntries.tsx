@@ -47,14 +47,15 @@ const SortEntries = (props: Props) => {
               </span>
             </a>
           )).reverse()
-        : SORTED_ENTRIES.map(
+        : (SORTED_ENTRIES.length == 0) ? <h3>No entries added yet :(</h3> : SORTED_ENTRIES.map(
             ({ title, description, url, img, date, tag }, id) => (
               <a
                 key={id}
                 href={`/personal-blog${url}`}
                 className="all-entry"
                 style={{
-                  backgroundImage: `${img}`
+                  backgroundImage: `${img}`,
+                  backgroundSize: 'cover'
                 }}
               >
                 <h3>{title}</h3>
