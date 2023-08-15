@@ -1,6 +1,7 @@
 ---
 import '../styles/styles.sass'
 import Nav from '../components/Nav';
+import FooterRes from '../components/Footer';
 const { frontmatter } = Astro.props;
 ---
 
@@ -22,6 +23,10 @@ const { frontmatter } = Astro.props;
 <body>
     <Nav/>
     <img class="entry-image-md" src={frontmatter.image} alt="image">
+    <span>{frontmatter.date}</span>
     <slot class="inner-content-md"/>
+    {frontmatter.next === '' ? <></> : <a href={frontmatter.next}>Next</a>}
+    {frontmatter.previous === '' ? <></> : <a href={frontmatter.previous}>Prev</a>}
+    <FooterRes>
 </body>
 </html>

@@ -5,6 +5,9 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
+  build: {
+    inlineStylesheets: 'auto'
+  },
   site: 'https://Hctor11.github.io',
   base: '/personal-blog',
   markdown: {
