@@ -30,7 +30,7 @@ const { frontmatter } = Astro.props;
 </head>
 <body>
     <Nav/>
-    <img class="entry-image-md" src={frontmatter.image} alt="image">
+    <img class="entry-image-md" src={`/personal-blog${frontmatter.image}`} alt="image">
     <span>{frontmatter.date}</span>
     <slot class="inner-content-md"/>
     {frontmatter.next === '' ? <></> : <a href={frontmatter.next}>Next</a>}

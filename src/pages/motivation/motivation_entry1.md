@@ -2,7 +2,7 @@
 layout: ../../layouts/mainLayout.astro
 title: "Stoism principles"
 image: "/entries/entry1.png"
-date: "december 4th, 2023"
+date: "december 11th, 2023"
 next: ''
 previous: ''
 ---
