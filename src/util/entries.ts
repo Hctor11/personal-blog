@@ -1,17 +1,15 @@
 import TAGS from './TAGS';
 
-// ["Calculus", "Machine Learning", "Programming","Linear Algebra","UIUX","ALL"]
-
 const ENTRIES = [
   {
     id: 1,
-    title: "How to use psychology principles in UI and UX",
+    title: "Sobre dejar las redes sociales.",
     description:
-      "My Journey into Applying Psychology Principles for Intuitive UI/UX Design that Truly Resonates in Educative Sistems.",
-    url: '/uiux/psychology_principles',
-    img: '/entry1.png',
-    date: '08/15/2023',
-    tag: TAGS[4]
+      "Llevo casi un año sin usar redes sociales como Instagran y FaceBook, aqui te explico el porque.",
+    url: '/motivation/motivation_entry1',
+    img: '/entries/entry1.png',
+    date: 'december 2023',
+    tag: TAGS[5]
   }
 ];
 

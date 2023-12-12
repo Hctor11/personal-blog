@@ -3,17 +3,16 @@ import TAGS from "./../util/TAGS";
 import SortEntries from "./SortEntries";
 
 const TagsSearch = () => {
-
   const [selectedTag, setSelectedTag] = useState("ALL");
 
-  const handleTagClick = (tag:string) => {
-    return setSelectedTag(tag)
-  }
+  const handleTagClick = (tag: string) => {
+    return setSelectedTag(tag);
+  };
 
   return (
-    <div className = 'tag-search'>
+    <div className="tag-search">
       {TAGS.map((tag, id) => (
-          <button
+        <button
           className={`tag-search-button ${tag}`}
           key={id}
           style={{
@@ -26,7 +25,11 @@ const TagsSearch = () => {
                 ? "#009930"
                 : tag == TAGS[3]
                 ? "#eb5f34"
-                : tag == TAGS[4] ? '#6234eb' : '#383838'
+                : tag == TAGS[4]
+                ? "#6234eb"
+                : tag == TAGS[5]
+                ? "#f72d59"
+                : "#383838"
             }`,
           }}
           onClick={() => handleTagClick(tag)}
@@ -34,13 +37,18 @@ const TagsSearch = () => {
           {tag}
         </button>
       ))}
-      <p style={{
-        color: '#fff', 
-        marginTop: '12px',
-        filter: 'opacity(0.4)'}}>{selectedTag}</p>
-      <SortEntries toSort={selectedTag}/>
+      <p
+        style={{
+          color: "#fff",
+          marginTop: "12px",
+          filter: "opacity(0.4)",
+        }}
+      >
+        {selectedTag}
+      </p>
+      <SortEntries toSort={selectedTag} />
     </div>
   );
-}
+};
 
 export default TagsSearch;

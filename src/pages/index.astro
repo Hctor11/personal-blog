@@ -22,10 +22,10 @@ const RECENT_ENTRIES = ENTRIES.slice(ENTRIES.length - 4,ENTRIES.length).reverse(
 		<header>
 			<div class="main-title" id="main-title">
 				<h1>Héctor Rivera personal blog</h1>
-				<p>Blog to talk about the things that I like.</p>
+				<p>Blog to talk about things.</p>
 			</div>
 
-			<h3 style="font-weight: 400; margin-bottom: 5px">//Recent entries<h3>
+			<h3 style="font-weight: 400; margin-bottom: 5px">// Recent entries<h3>
 			<div class="recent-entries-container">
 				{RECENT_ENTRIES.map(({title, description, url,img,date,tag},id) => (
 					<div class=`recent-entry-${id} recent-entry` 
@@ -45,7 +45,9 @@ const RECENT_ENTRIES = ENTRIES.slice(ENTRIES.length - 4,ENTRIES.length).reverse(
 											tag == TAGS[1] ? '#eb34e5' : 
 												tag == TAGS[2] ? '#009930' : 
 													tag == TAGS[3] ? '#eb5f34' : 
-														tag == TAGS[4] ? '#6234eb' : '#383838'}`>
+														tag == TAGS[4] ? '#6234eb' : 
+															tag == TAGS[5] ? '#f72d59' :
+															'#383838'}`>
 								{tag}
 							</span>
 						</a>

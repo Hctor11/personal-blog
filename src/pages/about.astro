@@ -1,6 +1,7 @@
 ---
 import '../styles/styles.sass'
 import Nav from '../components/Nav';
+import PROJECTS from '../util/projects';
 ---
 
 <html lang="en">
@@ -30,7 +31,15 @@ import Nav from '../components/Nav';
 
     <h4 style="font-weight: 400; margin-top: 20px">// Some of the projects where I worked:</h4>
 
-
+    {PROJECTS.map(({name, description, date, url, img}) => (
+        <a href={url} target="_blank" class="project-link" style=`
+							background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.6) , rgba(0, 0, 0, 1)), url('/personal-blog${img}'); 
+							background-size: contain;`>
+            <h2>{name}</h2>
+            <p>{description}</p>
+            <span>{date}</span>
+        </a>
+    ))}
 
 </body>
 </html>

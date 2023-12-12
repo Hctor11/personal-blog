@@ -39,6 +39,8 @@ const SortEntries = (props: Props) => {
                       ? "#eb5f34"
                       : tag == TAGS[4]
                       ? "#6234eb"
+                      : tag == TAGS[5]
+                      ? "#f72d59"
                       : "#383838"
                   }`,
                 }}
