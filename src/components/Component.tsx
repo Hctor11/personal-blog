@@ -2,7 +2,7 @@ const Component = () => {
   return (
     <div>
         <h3 style={{fontWeight: '400', marginBottom: '5px'}}>
-          // Search by Tag
+          // All Entries
         </h3>
     </div>
   )

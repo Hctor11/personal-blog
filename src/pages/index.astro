@@ -1,11 +1,10 @@
 ---
 import '../styles/styles.sass'
 import ENTRIES from '../util/entries';
-import TAGS from './../util/TAGS';
 import Component from "../components/Component";
-import TagsSearch from "../components/TagsSearch";
 import FooterRes from '../components/Footer';
 import Nav from '../components/Nav';
+import Entries from '../components/Entries';
 
 const RECENT_ENTRIES = ENTRIES.slice(ENTRIES.length - 4,ENTRIES.length).reverse()
 ---
@@ -27,7 +26,7 @@ const RECENT_ENTRIES = ENTRIES.slice(ENTRIES.length - 4,ENTRIES.length).reverse(
 
 			<h3 style="font-weight: 400; margin-bottom: 5px">// Recent entries<h3>
 			<div class="recent-entries-container">
-				{RECENT_ENTRIES.map(({title, description, url,img,date,tag},id) => (
+				{RECENT_ENTRIES.map(({title, description, url,img,date},id) => (
 					<div class=`recent-entry-${id} recent-entry` 
 						style=`
 							background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.6) , rgba(0, 0, 0, 1)), url('/personal-blog${img}'); 
@@ -37,26 +36,13 @@ const RECENT_ENTRIES = ENTRIES.slice(ENTRIES.length - 4,ENTRIES.length).reverse(
 							<h3>{title}</h3>
 							<p>{description}</p>
 							<span class='date-entry'>{date}</span>
-							<span 
-								class='tag-entry' 
-								style=`
-									background-color: 
-										${tag == TAGS[0] ? '#347aeb' : 
-											tag == TAGS[1] ? '#eb34e5' : 
-												tag == TAGS[2] ? '#009930' : 
-													tag == TAGS[3] ? '#eb5f34' : 
-														tag == TAGS[4] ? '#6234eb' : 
-															tag == TAGS[5] ? '#f72d59' :
-															'#383838'}`>
-								{tag}
-							</span>
 						</a>
 					</div>
 				))}				
 			</div>
 		</header>
 		<Component></Component>
-		<TagsSearch client:load/>
+		<Entries></Entries>
 		<FooterRes/>
 	</body>
 </html>
